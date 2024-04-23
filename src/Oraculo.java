@@ -13,7 +13,7 @@ public class Oraculo {
         }
         guerreiro.setVidas(sortearVidas());
         mostraVidas();
-        fases(0);
+        fases(0, 0);
 
     }
     public int sortearVidas(){
@@ -40,8 +40,13 @@ public class Oraculo {
     public void mostraVidas(){
         InOut.MsgDeInformacao("Vidas","Você tem " + guerreiro.vidas + " sobrando");
     }
-    public void fases(int i){
-        int numero = (int)(Math.random() * 99) + 1;
+    public void fases(int i, int num){
+        int numero;
+        if(num != 0){
+            numero = num;
+        }else{
+            numero = (int)(Math.random() * 99) + 1;
+        }
         if(guerreiro.vidas == 0){
             derrota();
         }else if(guerreiro.vitorias == 8){
@@ -49,19 +54,20 @@ public class Oraculo {
         }else{
             int tentativa = InOut.leInt("Qual número estou pensando?");
             if(tentativa == numero){
-                InOut.MsgDeInformacao("passou", "Você acertou");
+                InOut.MsgDeInformacao("passou", "Você acertou e recuperou 3 vidas");
                 guerreiro.vitorias++;
-                fases(i + 1);
+                guerreiro.vidas += 3;
+                fases(i + 1, 0);
             }else if(tentativa > numero){
                 InOut.MsgDeInformacao("perdeu", "O número que eu pensei é menor");
                 guerreiro.vidas--;
                 mostraVidas();
-                fases(i);
+                fases(i, numero);
             } else if (tentativa < numero){
                 InOut.MsgDeInformacao("perdeu", "O número que eu pensei é maior");
                 guerreiro.vidas--;
                 mostraVidas();
-                fases(i);
+                fases(i, numero);
             }
         }
     }
