@@ -21,7 +21,7 @@ public class Oraculo {
         return random;
     }
     public String prologo(){
-        String nome = InOut.leString("Olá guerreiro solitário, meu nome é " + oraculoNome + ", sou um oráculo de poder imensurável, me diga seu nome:");
+        String nome = InOut.leString("Olá guerreiro solitário, meu nome é Vinicius Aladeen, sou um oráculo de poder imensurável, me diga seu nome:");
         return nome;
     }
     public int prologo2(){
