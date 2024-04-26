@@ -1,7 +1,7 @@
 import java.lang.Math;
 
 public class Oraculo{
-    String oraculoNome = "Aladeen";
+
     Guerreiro guerreiro;
     public Oraculo(){
         SoundPlayer soundPlayer = new SoundPlayer();
@@ -9,14 +9,13 @@ public class Oraculo{
         guerreiro = new Guerreiro(prologo());
         int r = prologo2();
         if(r == 1){
-            explicação();
+            explicacao();
+            guerreiro.setVidas(sortearVidas());
+            mostraVidas();
+            fases(0, 0);
         }else{
             derrota();
         }
-        guerreiro.setVidas(sortearVidas());
-        mostraVidas();
-        fases(0, 0);
-
     }
     public int sortearVidas(){
         int random = (int)(Math.random() * 4) + 9;
@@ -36,7 +35,7 @@ public class Oraculo{
         }
         return resultado;
     }
-    public void explicação(){
+    public void explicacao(){
         InOut.MsgDeInformacao("Regras", "Você terá que adivinhar meus números, porém se suas vidas se esgotarem, eu destruo seu planeta");
     }
     public void mostraVidas(){
@@ -56,7 +55,7 @@ public class Oraculo{
         }else{
             int tentativa = InOut.leInt("Qual número estou pensando?");
             if(tentativa == numero){
-                InOut.MsgDeInformacao("passou", "Você acertou e recuperou 3 vidas");
+                InOut.MsgDeInformacao("passou", "Você acertou e recuperou 6 vidas");
                 guerreiro.vitorias++;
                 guerreiro.vidas += 6;
                 fases(i + 1, 0);

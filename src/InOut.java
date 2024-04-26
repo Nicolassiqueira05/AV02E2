@@ -27,7 +27,7 @@ public class InOut extends JOptionPane{
 
 	public static String leString (String frase){
 		String Entrada;
-		Entrada = (String) JOptionPane.showInputDialog(null, frase, "Poo Bet", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
+		Entrada = (String) JOptionPane.showInputDialog(null, frase, "War", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
 		return Entrada;
 	}
 
@@ -50,7 +50,7 @@ public class InOut extends JOptionPane{
 
 		do{
 			try{
-				Entrada = (String) JOptionPane.showInputDialog (null, frase, "Entrada de dados", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
+				Entrada = (String) JOptionPane.showInputDialog (null, frase, "War", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
 				num = Byte.parseByte(Entrada);
 				ERRO = false;
 			}
@@ -78,12 +78,11 @@ public class InOut extends JOptionPane{
 	public static short leShort (String frase){
 		short num=0;
 		String Entrada;
-		ImageIcon icon = new ImageIcon("Tigrinho.png");
 		boolean ERRO;
 
 		do{
 			try{
-				Entrada = (String) JOptionPane.showInputDialog (null, frase, "Entrada de dados", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
+				Entrada = (String) JOptionPane.showInputDialog (null, frase, "War", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
 				num = Short.parseShort(Entrada);
 				ERRO = false;
 			}
@@ -110,12 +109,11 @@ public class InOut extends JOptionPane{
 	public static int leInt (String frase){
 		int num = 0;
 		String Entrada;
-		ImageIcon icon = new ImageIcon("Tigrinho.png");
 		boolean ERRO;
 
 		do{
 			try{
-				Entrada = (String) JOptionPane.showInputDialog (null, frase, "Entrada de dados", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
+				Entrada = (String) JOptionPane.showInputDialog (null, frase, "War", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
 				num = Integer.parseInt(Entrada);
 				ERRO = false;
 			}
@@ -142,12 +140,11 @@ public class InOut extends JOptionPane{
 	public static long leLong (String frase){
 		long num = 0;
 		String Entrada;
-		ImageIcon icon = new ImageIcon("Trigrinho.png");
 		boolean ERRO;
 
 		do{
 			try{
-				Entrada = (String)JOptionPane.showInputDialog (null, frase, "Entrada de dados", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
+				Entrada = (String)JOptionPane.showInputDialog (null, frase, "War", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
 				num = Long.parseLong(Entrada);
 				ERRO = false;
 			}
@@ -174,12 +171,11 @@ public class InOut extends JOptionPane{
 	public static float leFloat (String frase){
 		float num = 0;
 		String Entrada;
-		ImageIcon icon = new ImageIcon("Trigrinho.png");
 		boolean ERRO;
 
 		do{
 			try{
-				Entrada = (String) JOptionPane.showInputDialog (null, frase, "Entrada de dados", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
+				Entrada = (String) JOptionPane.showInputDialog (null, frase, "War", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
 				num = Float.parseFloat(Entrada);
 				ERRO = false;
 			}
@@ -206,12 +202,11 @@ public class InOut extends JOptionPane{
 	public static double leDouble (String frase){
 		double num = 0;
 		String Entrada;
-		ImageIcon icon = new ImageIcon("Trigrinho.png");
 		boolean ERRO;
 
 		do{
 			try{
-				Entrada = (String)JOptionPane.showInputDialog (null, frase, "Entrada de dados", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
+				Entrada = (String)JOptionPane.showInputDialog (null, frase, "War", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
 				num = Double.parseDouble(Entrada);
 				ERRO = false;
 			}
@@ -236,11 +231,10 @@ public class InOut extends JOptionPane{
 	 */
 	public static char leChar (String frase){
 		String Entrada;
-		ImageIcon icon = new ImageIcon("Trigrinho.png");
 		boolean ERRO;
 
 		do{
-			Entrada = (String) JOptionPane.showInputDialog (null, frase, "Entrada de dados", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
+			Entrada = (String) JOptionPane.showInputDialog (null, frase, "War", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
 			if (Entrada.length()!= 0)
 				ERRO = false;
 			else
