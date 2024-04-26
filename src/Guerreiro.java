@@ -8,7 +8,4 @@ public class Guerreiro {
     public void setVidas(int vidas){
         this.vidas = vidas;
     }
-    public void venceu(){
-        vitorias++;
-    }
 }
