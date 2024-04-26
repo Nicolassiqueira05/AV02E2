@@ -1,9 +1,11 @@
-package poobet;
-
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
+import javax.imageio.ImageIO;
+import javax.swing.*;
+import javax.swing.plaf.OptionPaneUI;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * A classe <i>leDadosWin</i> permite a leitura de dados de tipos nativos e de
@@ -17,22 +19,13 @@ import java.awt.*;
  * <li>Tratamento das excecoes
  * </ul>
  */
-public class InOut {
-	/**
-	 * Este metodo eh para entrada de uma String. Tem como parametro de entrada
-	 * uma String que indicara para o usuario qual o dado que sera lido naquele
-	 * momento por aquela caixa de texto e retorna a String lida
-	 *
-	 * @param frase que sera usada para o usuario saber qual dado sera lido
-	 * @return String que foi lida
-	 */
+public class InOut extends JOptionPane{
 
-	static ImageIcon icon = new ImageIcon(InOut.class.getResource("Tigrinho.png"));
-	static Image newIcon = icon.getImage().getScaledInstance(160, 140, Image.SCALE_SMOOTH);
+	static ImageIcon icon = new ImageIcon(InOut.class.getResource("oraculo.png"));
+	static Image newIcon = icon.getImage().getScaledInstance(300, 300, Image.SCALE_SMOOTH);
 	static ImageIcon resizedIcon = new ImageIcon(newIcon);
 
 	public static String leString (String frase){
-
 		String Entrada;
 		Entrada = (String) JOptionPane.showInputDialog(null, frase, "Poo Bet", JOptionPane.QUESTION_MESSAGE, resizedIcon, null, null);
 		return Entrada;
