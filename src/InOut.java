@@ -268,7 +268,7 @@ public class InOut extends JOptionPane{
 	 * @param frase     que aparecera dentro da caixa de mensagem
 	 */
 	public static void MsgDeInformacao(String cabecalho, String frase){
-		JOptionPane.showMessageDialog(null, frase, cabecalho, JOptionPane.INFORMATION_MESSAGE);
+		JOptionPane.showMessageDialog(null, frase, cabecalho, JOptionPane.INFORMATION_MESSAGE, resizedIcon);
 	}
 
 	/**
